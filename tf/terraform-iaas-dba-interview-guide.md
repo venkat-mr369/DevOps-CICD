@@ -816,7 +816,7 @@ resource "aws_db_instance" "postgres" {
 
 ---
 
-## Q12. How do you rotate the master password securely?
+### Q12. How do you rotate the master password securely?
 
 ```hcl
 # APPROACH 1: AWS Secrets Manager Auto-Rotation (Best Practice)
@@ -844,7 +844,7 @@ resource "aws_db_instance" "postgres" {
 
 ---
 
-## Q13. How do you perform zero-downtime version upgrade?
+### Q13. How do you perform zero-downtime version upgrade?
 
 **Answer:**
 
@@ -879,7 +879,7 @@ resource "aws_db_instance" "postgres" {
 ---
 ---
 
-# SECTION 3: AWS AURORA — DEEP DIVE
+### SECTION 3: AWS AURORA — DEEP DIVE
 
 ---
 
@@ -904,20 +904,20 @@ resource "aws_db_instance" "postgres" {
   ┌──────────────────────────────────────────────────┐
   │                AURORA CLUSTER                     │
   │                                                   │
-  │  ┌──────────┐   ┌──────────┐   ┌──────────┐     │
-  │  │  WRITER  │   │ READER 1 │   │ READER 2 │     │
-  │  │ Instance │   │ Instance │   │ Instance │     │
-  │  │  (AZ-1a) │   │  (AZ-1b) │   │  (AZ-1c) │     │
-  │  └────┬─────┘   └────┬─────┘   └────┬─────┘     │
+  │  ┌──────────┐   ┌──────────┐   ┌──────────┐       │
+  │  │  WRITER  │   │ READER 1 │   │ READER 2 │       │
+  │  │ Instance │   │ Instance │   │ Instance │       │
+  │  │  (AZ-1a) │   │  (AZ-1b) │   │  (AZ-1c) │       │
+  │  └────┬─────┘   └────┬─────┘   └────┬─────┘       │
   │       │               │               │           │
-  │  ┌────┴───────────────┴───────────────┴────┐     │
+  │  ┌────┴───────────────┴───────────────┴────┐      │
   │  │    SHARED DISTRIBUTED STORAGE LAYER      │     │
   │  │   6 copies of data across 3 AZs          │     │
   │  │   Auto-scaling: 10GB → 128TB             │     │
   │  │   Self-healing: bad blocks auto-repaired │     │
-  │  └─────────────────────────────────────────┘     │
+  │  └─────────────────────────────────────────┘      │
   │                                                   │
-  │  Writer Endpoint: prod-aurora.cluster-xxx.region.rds.amazonaws.com  │
+  │  Writer Endpoint: prod-aurora.cluster-xxx.region.rds.amazonaws.com    │
   │  Reader Endpoint: prod-aurora.cluster-ro-xxx.region.rds.amazonaws.com │
   └──────────────────────────────────────────────────┘
 ```
