@@ -1,5 +1,5 @@
-# Liquibase, Flyway & CI/CD Jenkins — Complete Interview Guide
-## Database Change Management for PostgreSQL & MySQL
+## Liquibase, Flyway & CI/CD Jenkins — Complete Interview Guide
+### Database Change Management for PostgreSQL & MySQL
 
 > **Installation Steps • In-Depth Explanations • Real Database Scripts • CI/CD Pipeline Setup**
 > For Sr DBA / DevOps / Database Engineer Interviews
@@ -7,11 +7,11 @@
 ---
 ---
 
-# SECTION 1: DATABASE CHANGE MANAGEMENT — CONCEPTS
+## SECTION 1: DATABASE CHANGE MANAGEMENT — CONCEPTS
 
 ---
 
-## Q1. What is Database Change Management (DCM) and why is it needed?
+### Q1. What is Database Change Management (DCM) and why is it needed?
 
 **Answer:** Database Change Management is the practice of tracking, versioning, and deploying database schema changes (DDL) and reference data changes (DML) in a controlled, repeatable, and auditable manner — just like how Git manages application source code.
 
@@ -57,7 +57,7 @@
 
 ---
 
-## Q2. What is the difference between Liquibase and Flyway?
+### Q2. What is the difference between Liquibase and Flyway?
 
 | Feature | Liquibase | Flyway |
 |---------|-----------|--------|
@@ -81,11 +81,11 @@
 ---
 ---
 
-# SECTION 2: FLYWAY — COMPLETE GUIDE
+## SECTION 2: FLYWAY — COMPLETE GUIDE
 
 ---
 
-## Q3. What is Flyway and how does it work?
+### Q3. What is Flyway and how does it work?
 
 **Answer:** Flyway is a database migration tool that uses **versioned SQL scripts** to manage schema changes. It tracks which scripts have been applied using a metadata table called `flyway_schema_history`.
 
@@ -144,7 +144,7 @@
 
 ---
 
-## Q4. How to install Flyway? (Step-by-Step)
+### Q4. How to install Flyway? (Step-by-Step)
 
 ### Installation on Linux (Production DBA Server)
 
@@ -207,7 +207,7 @@ docker run --rm \
 
 ---
 
-## Q5. Flyway Configuration for PostgreSQL and MySQL
+### Q5. Flyway Configuration for PostgreSQL and MySQL
 
 ### PostgreSQL Configuration
 
@@ -268,7 +268,7 @@ flyway.defaultSchema=telecom_db
 
 ---
 
-## Q6. Flyway Database Scripts — PostgreSQL
+### Q6. Flyway Database Scripts — PostgreSQL
 
 ### V1__create_schema_and_roles.sql
 
@@ -532,7 +532,7 @@ ORDER BY month DESC, call_type;
 
 ---
 
-## Q7. Flyway Database Scripts — MySQL
+### Q7. Flyway Database Scripts — MySQL
 
 ### V1__create_schema_mysql.sql
 
@@ -661,7 +661,7 @@ DELIMITER ;
 
 ---
 
-## Q8. Flyway Commands — Complete Reference
+### Q8. Flyway Commands — Complete Reference
 
 ```bash
 # ============================================================
@@ -743,11 +743,11 @@ docker run --rm --network host \
 ---
 ---
 
-# SECTION 3: LIQUIBASE — COMPLETE GUIDE
+## SECTION 3: LIQUIBASE — COMPLETE GUIDE
 
 ---
 
-## Q9. What is Liquibase and how does it work?
+### Q9. What is Liquibase and how does it work?
 
 **Answer:** Liquibase uses a **changelog** file (XML, YAML, JSON, or SQL) that contains **changesets**. Each changeset has a unique `id` and `author`. Liquibase tracks applied changesets in the `DATABASECHANGELOG` table.
 
@@ -850,7 +850,7 @@ docker run --rm --network host \
 
 ---
 
-## Q11. Liquibase Configuration for PostgreSQL and MySQL
+### Q11. Liquibase Configuration for PostgreSQL and MySQL
 
 ### PostgreSQL — liquibase.properties
 
@@ -1049,7 +1049,7 @@ INSERT INTO telecom.subscribers (first_name, last_name, email, phone, plan_type,
 
 ---
 
-## Q13. Liquibase Commands — Complete Reference
+### Q13. Liquibase Commands — Complete Reference
 
 ```bash
 # ============================================================
@@ -1666,7 +1666,7 @@ def getProps(env) {
 
 ---
 
-## Q18. Jenkins Pipeline — Docker-Based (No Installation Needed)
+### Q18. Jenkins Pipeline — Docker-Based (No Installation Needed)
 
 ```groovy
 // ============================================================
@@ -1723,11 +1723,11 @@ pipeline {
 ---
 ---
 
-# SECTION 5: INTERVIEW QUESTIONS — ADVANCED
+## SECTION 5: INTERVIEW QUESTIONS — ADVANCED
 
 ---
 
-## Q19. How do you handle rollback in Flyway vs Liquibase?
+### Q19. How do you handle rollback in Flyway vs Liquibase?
 
 **Answer:**
 
@@ -1742,7 +1742,7 @@ pipeline {
 
 ---
 
-## Q20. What happens if a migration fails halfway?
+### Q20. What happens if a migration fails halfway?
 
 **Answer:**
 
@@ -1754,7 +1754,7 @@ pipeline {
 
 ---
 
-## Q21. How do you adopt Flyway/Liquibase on an existing database?
+### Q21. How do you adopt Flyway/Liquibase on an existing database?
 
 **Answer:**
 
@@ -1782,7 +1782,7 @@ liquibase changelog-sync
 
 ---
 
-## Q22. Git Repository Structure for Database Migrations
+### Q22. Git Repository Structure for Database Migrations
 
 ```
   telecom-db-migrations/
@@ -1831,7 +1831,7 @@ liquibase changelog-sync
 
 ---
 
-## Q23. Best Practices for Database CI/CD
+### Q23. Best Practices for Database CI/CD
 
 1. **Never modify already-applied migrations** — Create new migration files instead
 2. **One DDL per migration file** (especially for MySQL) — Easier to troubleshoot failures
