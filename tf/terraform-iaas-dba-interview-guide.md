@@ -473,19 +473,19 @@ terraform plan
 ```
   MULTI-AZ ARCHITECTURE:
   ┌─────────────┐    Synchronous    ┌─────────────┐
-  │   PRIMARY    │ ──Replication──► │   STANDBY    │
+  │   PRIMARY   │ ──Replication──►  │   STANDBY    │
   │  (AZ-1a)    │                   │  (AZ-1b)     │
-  │  Read/Write  │                   │  Not Readable│
-  └──────┬───────┘                   └──────┬───────┘
-         │                                   │
-         │  ← Application connects here      │ ← Automatic failover
-         │     (single DNS endpoint)         │    (DNS points here now)
+  │  Read/Write  │                  │  Not Readable│
+  └──────┬───────┘                  └──────┬───────┘
+         │                                 │
+         │  ← Application connects here    │ ← Automatic failover
+         │     (single DNS endpoint)       │    (DNS points here now)
 
   READ REPLICA ARCHITECTURE:
   ┌─────────────┐    Asynchronous   ┌─────────────┐
   │   PRIMARY    │ ──Replication──► │  REPLICA 1   │  ← Readable!
-  │  (AZ-1a)    │                   │  (AZ-1b)     │
-  │  Read/Write  │                   └──────────────┘
+  │  (AZ-1a)     │                  │  (AZ-1b)     │
+  │  Read/Write  │                  └──────────────┘
   └──────────────┘ ──Replication──► ┌──────────────┐
                                     │  REPLICA 2   │  ← Readable!
                                     │  (AZ-1c)     │
@@ -494,7 +494,7 @@ terraform plan
 
 ---
 
-## Q10. Complete Production RDS PostgreSQL with Terraform
+### Q10. Complete Production RDS PostgreSQL with Terraform
 
 ```hcl
 # ============================================================
@@ -795,7 +795,7 @@ resource "aws_cloudwatch_metric_alarm" "replica_lag" {
 
 ---
 
-## Q11. How do you enable PITR (Point-In-Time Recovery)?
+### Q11. How do you enable PITR (Point-In-Time Recovery)?
 
 **Answer:** PITR is enabled automatically when `backup_retention_period > 0`.
 
