@@ -3,7 +3,7 @@
 
 ---
 
-# 🔹 SQL DBA + Terraform Interview Questions & Solutions
+## 🔹 SQL DBA + Terraform Interview Questions & Solutions
 
 ---
 
