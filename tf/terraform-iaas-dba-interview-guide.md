@@ -160,7 +160,7 @@ resource "aws_dynamodb_table" "terraform_lock" {
 
 ---
 
-## Q4. Explain Terraform modules and why they matter for database provisioning.
+### Q4. Explain Terraform modules and why they matter for database provisioning.
 
 **Answer:** Modules are **reusable Terraform packages** — like functions in programming. You write the database config once and reuse it across environments.
 
@@ -241,7 +241,7 @@ module "rds_postgres" {
 
 ---
 
-## Q5. Explain Terraform variables, outputs, and data sources.
+### Q5. Explain Terraform variables, outputs, and data sources.
 
 ```hcl
 # ========================================
@@ -351,7 +351,7 @@ resource "aws_db_instance" "postgres" {
 
 ---
 
-## Q6. Explain depends_on, lifecycle rules, and prevent_destroy.
+### Q6. Explain depends_on, lifecycle rules, and prevent_destroy.
 
 ```hcl
 # ========================================
@@ -397,7 +397,7 @@ resource "aws_db_instance" "prod_postgres" {
 
 ---
 
-## Q7. How do you import an existing RDS instance into Terraform?
+### Q7. How do you import an existing RDS instance into Terraform?
 
 **Answer:** When you have an RDS instance created manually (via console) and want to manage it with Terraform:
 
