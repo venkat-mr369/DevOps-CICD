@@ -427,7 +427,7 @@ terraform plan
 
 ---
 
-## Q8. How do you handle drift detection?
+### Q8. How do you handle drift detection?
 
 **Answer:** Drift happens when someone manually changes a resource in the AWS Console that's managed by Terraform.
 
@@ -452,11 +452,11 @@ terraform plan
 ---
 ---
 
-# SECTION 2: AWS RDS — DEEP DIVE
+### SECTION 2: AWS RDS — DEEP DIVE
 
 ---
 
-## Q9. What is the difference between Multi-AZ and Read Replica?
+### Q9. What is the difference between Multi-AZ and Read Replica?
 
 | Feature | Multi-AZ | Read Replica |
 |---------|----------|--------------|
