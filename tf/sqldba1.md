@@ -1,5 +1,5 @@
-Great question 👍 — combining **SQL DBA** with **Terraform** is a hot area since many companies are moving to **DBaaS + IaC** (Infrastructure as Code).
-Here’s a **deep-dive set of SQL DBA interview questions that connect directly with Terraform use cases**.
+**SQL DBA** with **Terraform** is a hot area since many companies are moving to **DBaaS + IaC** (Infrastructure as Code).
+**Deep-dive set of SQL DBA interview questions that connect directly with Terraform use cases**.
 
 ---
 
