@@ -1,5 +1,5 @@
-# Terraform + IaaS for DBA — Complete Interview Guide
-## AWS RDS • Aurora • GCP Cloud SQL • Terraform Best Practices • Production Architecture
+### Terraform + IaaS for DBA — Complete Interview Guide
+### AWS RDS • Aurora • GCP Cloud SQL • Terraform Best Practices • Production Architecture
 
 > **75+ In-Depth Questions with Detailed Answers, Terraform Code & Architecture Diagrams**
 > For Sr Cloud DBA / DevOps DBA / Database Infrastructure Engineer Interviews
@@ -7,11 +7,11 @@
 ---
 ---
 
-# SECTION 1: CORE TERRAFORM CONCEPTS
+### SECTION 1: CORE TERRAFORM CONCEPTS
 
 ---
 
-## Q1. What is Terraform and why do DBAs need it?
+### Q1. What is Terraform and why do DBAs need it?
 
 **Answer:** Terraform is an Infrastructure as Code (IaC) tool by HashiCorp that lets you define, provision, and manage cloud infrastructure using declarative configuration files (HCL — HashiCorp Configuration Language).
 
@@ -41,7 +41,7 @@
 
 ---
 
-## Q2. Explain the Terraform lifecycle (init, plan, apply, destroy).
+### Q2. Explain the Terraform lifecycle (init, plan, apply, destroy).
 
 **Answer:**
 
@@ -86,7 +86,7 @@ terraform show               # Verify the created resources
 
 ---
 
-## Q3. What is Terraform state file and why is it critical?
+### Q3. What is Terraform state file and why is it critical?
 
 **Answer:** The state file (`terraform.tfstate`) is Terraform's **single source of truth**. It maps your Terraform configuration to real-world cloud resources.
 
